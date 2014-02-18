@@ -94,18 +94,38 @@ body {
     z-index: 101;
 }
 .drop-popover:before,
-.drop-popover-message:before,
-.drop-popover-bell:before,
+.drop-popover-message:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    background-image: url("img/arrow-up.png");
+    background-repeat: no-repeat;
+    background-position: 339px 0;
+    width: 350px;
+    height: 6px;
+}
+.drop-popover-bell:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    background-image: url("img/arrow-up.png");
+    background-repeat: no-repeat;
+    background-position: 295px 0;
+    width: 306px;
+    height: 6px;
+}
 .drop-popover-able:before {
     content: '';
     display: block;
     position: absolute;
-    right: 0;
     bottom: 100%;
     background-image: url("img/arrow-up.png");
     background-repeat: no-repeat;
-    width: 12px;
-    height: 7px;
+    background-position: 140px 0;
+    width: 151px;
+    height: 6px;
 }
 .drop-popover-message {
     border: 1px solid #d5d5d5;
@@ -452,6 +472,18 @@ textarea {
     cursor: pointer;
     margin: 5px 6px 0 0;
 }
+.reply:hover{
+    width: 70px;
+    height: 30px;
+    border: 1px solid #2f80e4;
+    background-color: #2f80e4;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 3px;
+    float: right;
+    cursor: pointer;
+    margin: 5px 6px 0 0;
+}
 .promo-box {
     width: 286px;
     height: 105px;
@@ -621,6 +653,7 @@ textarea {
         margin: 0 auto;
         float: none;
         overflow: hidden;
+        display: flex;
     }
     #search {
         margin: 0 auto;
@@ -672,29 +705,15 @@ textarea {
         width: 100%;
     }
     .menu {
-        display: block;
+        display: flex;
         width: 100%;
         margin: 0 auto;
     }
-    .menu-item:first-child {
-        float: none;
-        width: 16%;
-        margin: 0 auto;
-        border: none;
-    }
-    .menu-item:last-child {
-        padding: 0;
-        float: none;
-        border: none;
+    .menu-item {
+        padding: 0 13px;
     }
     .menu li {
         float: none;
-        width: 20%;
-        margin: 0 auto;
-        border: none;
-    }
-    .menu-item {
-        padding: 0;
     }
     #search {
         margin: 0 auto;
@@ -738,6 +757,4 @@ textarea {
         float: left;
     }
 }
-
-
 
