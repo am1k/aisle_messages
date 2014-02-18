@@ -57,9 +57,6 @@ body {
     border-right: none;
     padding-right: 0;
 }
-.arrow-drop p {
-
-}
 .arrow-drop a:after {
     content: '';
     display: inline-block;
