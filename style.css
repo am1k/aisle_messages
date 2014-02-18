@@ -696,7 +696,7 @@ textarea {
         float: left;
     }
 }
-@media screen and (max-width: 610px) and ( min-width: 400px) {
+@media screen and (max-width: 610px) and ( min-width: 500px) {
     #wrapper  {
         width: 100%;
         margin: 0 auto;
@@ -720,7 +720,7 @@ textarea {
         float: none;
         width: 250px;
         overflow: hidden;
-        margin-top: 22px;
+        margin-top: 40px;
     }
     .nav-menu {
         height: 100%;
@@ -757,4 +757,81 @@ textarea {
         float: left;
     }
 }
+@media screen and (max-width: 500px) and ( min-width: 400px) {
+    #wrapper  {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #header {
+        width: 100%;
+    }
+    .menu {
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .menu-item {
+        padding: 0 13px;
+    }
+    .menu li {
+        display: inline-block;
+    }
+    .menu li:nth-of-type(5) {
+        padding-left: 0;
+        margin-top: 5px;
+    }
+    .menu li:last-child {
+        margin-top: 5px;
+    }
+    #search {
+        margin: 0 auto;
+        float: none;
+        width: 250px;
+        overflow: hidden;
+        margin-top: 50px;
+    }
+    .nav-menu {
+        height: 100%;
+        width: 100%;
+    }
+    #main-content {
+        width: 100%;
+        height: 100%;
+    }
+    .users-column {
+        width: 100%;
+    }
+    .message-column {
+        width: 100%;
+    }
+    textarea {
+        width: 48.5%;
+    }
+    .proceed {
+        width: 50%;
+    }
+    #footer {
+        width: 100%;
+    }
+    .promo-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .promo-box p {
+        float: none;
+        padding-top: 20px;
+    }
+    .promo-box:nth-of-type(3) {
+        float: left;
+    }
+    .drop-popover {
+        right: 87px;
+    }
+    .drop-popover-message {
+        right:87px;
+    }
+
+}
+
+
 
