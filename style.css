@@ -15,13 +15,17 @@ body {
     height: 42px;
     margin-top: 20px;
 }
-.button-list {
+.logo{
+    display: inline-block;
+    height: 100%;
+}
+.events{
     float: right;
     margin-top: 20px;
     position: relative;
     color: #666;
 }
-.button-list li {
+.events li {
     border-right: 1px solid #bfbfbf;
     display: inline-block;
     padding: 0 16px 0 16px;
@@ -29,7 +33,7 @@ body {
 .connections a {
     display: block;
     position: relative;
-    background-image: url("img/user.png");
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAvklEQVQ4y7WRQQrCMBREgz1DweC6dC05hKBeoaueL6ALexxXpXEnxXXV+TIpEkJJK354EKYzkyZRKjLGmAJY0BNZFyplYCzBHbwCRCtTCiwDDdCkoWZTCnqa9ZemqT1SCj6/nKr/pSB2hPWcI/hLvDC44Xr6EvExA3twijyh50xPFoaP4DoRDBHvwYcr8AQDd6/BFuRgRXJqNT0DM5UUOLbuVOKIl5nbWKBmDgtaWXQ/FHRjwUKc4rO4BeFWsm9wgLvXWqRBaQAAAABJRU5ErkJggg==");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     width: 16px;
@@ -38,7 +42,7 @@ body {
 .messages a {
     display: block;
     position: relative;
-    background-image: url("img/message.png");
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA+0lEQVQ4EZXBsSqFARwH0P/t1k0yGyxKYVCWsyCzvIInkLJaJYMdm8w3opR34AG8A9d0y8TA90NRkrqfc+onLKOPAYIgCAboY6V+QxfHCIIgCIIgCIJjdOsbDhG84ADz6NUX9DCPA7wgOKpPWEKDZ6zWCFjFMxosF84Q7FVL2EdwXrhHMFstYRbBQyEIxqol9BC8FR4RzFVLmEYwKFwh2K6WsIPgsrCO4BGTNQIW8YRgrT6hj+AOC/UHTGALQwT9+oYxXCB4qw/YwhBDDNEgCK4xXr8hCDbRIAiCV9xgA536C4KgQXCCGUyhW6MgCIJTdOo/cIsBdtGpFt4BQhGolCZl4nkAAAAASUVORK5CYII=");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     width: 16px;
@@ -47,13 +51,13 @@ body {
 .bells a {
     display: block;
     position: relative;
-    background-image: url("img/bell.png");
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAw0lEQVQ4y6XRMU4DMRCFYRerTYOi9DnGd4uUe4DcIFwSpC1DmYQWkQPQQGWaWeSgtUPISNO89/zPWJPSr0KPR4z4iB5D61OrsMYeudJ7rGuP++LxCQOW0UNoGS9YzAF2EThgNeOvwsvYzQHGMIfGF4fIjHPmV5jLBuAhMp9zZkZOV6qauwuA7lYAulLcThf4A2C6xLacfrwQ24Bp2BFdKZwu1qoDOrz+DCxW+k8fEp7uADy3Vn0vgud0a2GDM96wqeW+AW9KqQ7Q3LtlAAAAAElFTkSuQmCC");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     width: 16px;
     height: 16px;
 }
-.button-list li:last-child {
+.events li:last-child {
     border-right: none;
     padding-right: 0;
 }
@@ -61,11 +65,11 @@ body {
     content: '';
     display: inline-block;
     vertical-align: baseline;
-    background-image: url("img/arrow.png");
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAICAQAAACM2m15AAAAcElEQVQI12MIXRvqxoAVhIqEJjCEmoQ+Cw3EIikVei20HcTQCX0SGosmqRh6L7QaxlENvR+agSSpEfo4NBdZtVzo9dAyKNsQaF0Cul3ioRdCW4C0VejL0BBsLhUKPRm6OvR1qBcDDq/whx4MdUAWAQCweyGWlZHYkgAAAABJRU5ErkJggg==");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     width: 15px;
-    height: 9px;
+    height: 8px;
     margin-left: 7px;
 }
 .messages-count {
@@ -81,6 +85,12 @@ body {
     background-color: #dd0017;
     border-radius: 50%;
     color: #fff;
+}
+.person-view {
+    overflow: hidden;
+}
+.list-popover li a {
+    display: inline;
 }
 .drop-popover {
     border: 1px solid #d5d5d5;
@@ -156,7 +166,6 @@ body {
 .drop-popover-able li {
     border-bottom: 1px solid #d5d5d5;
     background: #fff;
-    padding: 12px 6px 12px 12px;
     display: block;
     border-right: 0;
     color: #222;
@@ -167,6 +176,16 @@ body {
     background: #dedede;
     color: #222;
     font-weight: 200;
+}
+.drop-popover-able a:after {
+    background-image: none;
+}
+.drop-popover-able li a {
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+    padding: 12px 6px 12px 12px;
+    text-align: left;
 }
 .popover-arrow {
     float: right;
@@ -271,6 +290,9 @@ body {
 .arrow-drop:hover .drop-popover-able {
     display: block;
 }
+.incoming-name {
+    font-weight: bold;
+}
 .menu {
     float: left;
     margin-top: 5px;
@@ -311,28 +333,41 @@ body {
     border: 1px solid #bfbfbf;
 }
 #main-content {
-    height: 850px;
+    min-height: 850px;
+    min-width: 980px;
 }
 .users-column {
-    width: 330px;
+    max-width: 330px;
+    width: 100%;
     float: left;
-
+}
+.users-column ul {
+    max-width: 330px;
+    width: 100%;
+    float: left;
 }
 .users-column li {
     border-bottom: 1px solid #d5d5d5;
-    height: 85px;
-}
-.users-column img {
-    width: 43px;
-    height: 43px;
-    padding: 20px 10px 20px 20px;
 }
 .users-column p {
-    padding-top: 25px;
+    padding-top: 33px ;
+    display: inline-block;
+    vertical-align: top;
+    width: 67%;
+    font-size: 12px;
+}
+.img-access {
+    display: inline-block;
+    background-image: url("img/stark.jpg");
+    height: 55px;
+    width: 55px;
+    margin: 15px 10px 15px 20px;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 .x-icon {
     float: right;
-    margin-top: -35px;
+    margin-top: 15px;
     margin-right: 12px;
     display: none;
     position: relative;
@@ -375,7 +410,7 @@ body {
     border-right: 3px solid transparent;
     border-top: 5px solid #333;
 }
-.incoming {
+.unread {
     background-color: #f5f5f5;
 }
 .selected {
@@ -398,8 +433,9 @@ body {
     display: block;
 }
 .message-column {
-    float: right;
-    width: 648px;
+    float: left;
+    max-width: 647px;
+    width: 100%;
     height: 850px;
     position: relative;
     border-left: 1px solid #d5d5d5;
@@ -409,10 +445,12 @@ body {
 }
 .message-column li {
     padding-bottom: 40px;
+    overflow: hidden;
 }
 .sent-avatar {
     overflow: hidden;
     float: left;
+    width: 100%;
 }
 .sent-avatar img {
     width: 44px;
@@ -420,19 +458,27 @@ body {
 }
 .sent-item {
     overflow: hidden;
-    padding: 0 0 10px 10px;
 }
 .sent-item h3 {
     font-weight: bold;
     float: left;
+    padding-left: 10px;
     font-size: 14px;
 }
-.created-time {
+.time-invitation {
     float: right;
+}
+.date {
+    border-right: 1px solid #999999;
+    padding-right: 5px;
+}
+.time {
+    padding-left: 5px;
 }
 .message-text {
     padding-left: 54px;
-    text-align: justify;
+    float: left;
+    width: 91%;
 }
 .send-message {
     height: 151px;
@@ -486,7 +532,7 @@ textarea {
     cursor: pointer;
     margin: 5px 6px 0 0;
 }
-.promo-box {
+.boxes {
     width: 286px;
     height: 105px;
     background: #f3f3f3;
@@ -494,16 +540,17 @@ textarea {
     float: left;
     margin-right: 14px ;
 }
-.promo-box:nth-of-type(3) {
+.boxes:nth-of-type(3) {
     float: right;
     margin-right: 0;
 }
-.promo-box p {
+.boxes p {
     font-size: 12px;
     float: left;
     padding-top: 5px;
 }
-.promo-box b {
+.boxes span {
+    font-weight: bold;
     float: left;
     margin: 5px 0 0 7px;
     font-size: 20px;
@@ -578,15 +625,15 @@ textarea {
     #footer {
         width: 100%;
     }
-    .promo-box {
+    .boxes {
         width: 100%;
         margin-bottom: 10px;
     }
-    .promo-box p {
+    .boxes p {
         float: none;
-        padding-top: 20px;
+        padding-top: 40px;
     }
-    .promo-box:nth-of-type(3) {
+    .boxes:nth-of-type(3) {
         float: left;
     }
 }
@@ -631,15 +678,15 @@ textarea {
     #footer {
         width: 100%;
     }
-    .promo-box {
+    .boxes {
         width: 100%;
         margin-bottom: 10px;
     }
-    .promo-box p {
+    .boxes p {
         float: none;
-        padding-top: 20px;
+        padding-top: 40px;
     }
-    .promo-box:nth-of-type(3) {
+    .boxes:nth-of-type(3) {
         float: left;
     }
 }
@@ -686,15 +733,15 @@ textarea {
     #footer {
         width: 100%;
     }
-    .promo-box {
+    .boxes {
         width: 100%;
         margin-bottom: 10px;
     }
-    .promo-box p {
+    .boxes p {
         float: none;
-        padding-top: 20px;
+        padding-top: 40px;
     }
-    .promo-box:nth-of-type(3) {
+    .boxes:nth-of-type(3) {
         float: left;
     }
 }
@@ -747,15 +794,15 @@ textarea {
     #footer {
         width: 100%;
     }
-    .promo-box {
+    .boxes {
         width: 100%;
         margin-bottom: 10px;
     }
-    .promo-box p {
+    .boxes p {
         float: none;
-        padding-top: 20px;
+        padding-top: 40px;
     }
-    .promo-box:nth-of-type(3) {
+    .boxes:nth-of-type(3) {
         float: left;
     }
 }
@@ -819,15 +866,15 @@ textarea {
     #footer {
         width: 100%;
     }
-    .promo-box {
+    .boxes {
         width: 100%;
         margin-bottom: 10px;
     }
-    .promo-box p {
+    .boxes p {
         float: none;
-        padding-top: 20px;
+        padding-top: 40px;
     }
-    .promo-box:nth-of-type(3) {
+    .boxes:nth-of-type(3) {
         float: left;
     }
     .drop-popover {
